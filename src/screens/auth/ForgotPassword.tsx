@@ -4,14 +4,15 @@ import Input from '../../components/textinput/TextInput'
 import Buttons from '../../components/buttons/Buttons'
 
 
-const ForgotPassword = ({navigation}) => {
+const ForgotPassword = () => {
 
     return (
         <View style={styles.container}>
             <View style={{ gap: 20 }}>
                 
                 <Input label='Enter your Email' />
-                <Buttons text={'Receive New Password via Email'} press={() => console.log("Sign Up Pressed")} />
+                <Buttons text={'Receive New Password via Email'} press={() => console.log("Pressed")} />
+              
             </View>
            
         </View>
