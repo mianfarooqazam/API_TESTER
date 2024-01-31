@@ -2,29 +2,35 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 interface ButtonProps {
     text: string;
-    press : ()=>void
+    press: () => void
 }
-const Buttons = ({text,press}:ButtonProps) => {
-  return (
-    <TouchableOpacity style={styles.touchableButton} onPress={press}> 
-<Text style={styles.text}>{text}</Text>
+const Buttons = ({ text, press }: ButtonProps) => {
+    return (
+        <View style={styles.container}>
+            <TouchableOpacity style={styles.touchableButton} onPress={press}>
+                <Text style={styles.text}>{text}</Text>
 
-    </TouchableOpacity>
-  )
+            </TouchableOpacity>
+        </View>
+    )
 }
 
 export default Buttons
 
 const styles = StyleSheet.create({
+    container: {
+        alignItems: 'center',
+
+    },
     touchableButton: {
-        width:"90%",
-        backgroundColor:"#5FBDFF",
-        alignItems:"center",
-        borderRadius:10,
-        padding:10
+        width: "90%",
+        backgroundColor: "#5FBDFF",
+        alignItems: "center",
+        borderRadius: 8,
+        padding: 10
     },
     text: {
-        fontWeight:"bold",
-        color:"#fff"
+        fontWeight: "bold",
+        color: "#fff"
     }
 })
