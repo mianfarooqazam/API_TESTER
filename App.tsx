@@ -1,6 +1,4 @@
-
-
-import { StyleSheet, Text, View,SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Buttons from './src/components/buttons/Buttons';
 import axios from 'axios';
 
@@ -8,13 +6,13 @@ import axios from 'axios';
 
 export default function App() {
 
-const getAPI = () => {
-  const baseURL = 'https://dummyjson.com'
-  axios({
-    method:"GET",
-    url:`${baseURL}/todos`
-  }).then(res => console.log(res)).catch(err => console.log(err))
-}
+  const getAPI = () => {
+    const baseURL = 'https://dummyjson.com'
+    axios({
+      method: "GET",
+      url: `${baseURL}/todos`
+    }).then(res => console.log(res)).catch(err => console.log(err))
+  }
 
 
   return (
